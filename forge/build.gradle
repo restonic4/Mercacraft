@@ -14,6 +14,15 @@ configurations {
     developmentForge.extendsFrom common
 }
 
+loom {
+    accessWidenerPath = project(":common").loom.accessWidenerPath
+
+    forge {
+        convertAccessWideners = true
+        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
+    }
+}
+
 version = "${rootProject.mod_version}-${rootProject.minecraft_version}-forge"
 
 dependencies {
@@ -55,6 +64,7 @@ processResources {
 
 shadowJar {
     exclude "fabric.mod.json"
+    exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
     archiveClassifier.set("dev-shadow")

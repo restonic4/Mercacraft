@@ -11,6 +11,10 @@ architectury {
     common((rootProject.enabled_platforms.tokenize(',') as List<String>))
 }
 
+loom {
+    accessWidenerPath = file("src/main/resources/mercacraft.accesswidener")
+}
+
 publishing {
     publications {
         mavenCommon(MavenPublication) {

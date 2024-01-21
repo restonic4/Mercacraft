@@ -1,0 +1,26 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    " U ",
+    "DDD",
+    "SSS"
+  ],
+  "key": {
+    "U": {
+      "item": "mercacraft:uranium",
+      "data": 0
+    },
+    "D": {
+      "item": "minecraft:dirt",
+      "data": 0
+    },
+    "S": {
+      "item": "minecraft:cobblestone",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "mercacraft:pizza",
+    "count": 1
+  }
+}
